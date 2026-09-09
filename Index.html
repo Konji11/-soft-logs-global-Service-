@@ -6,207 +6,213 @@
 <title>Soft Logs Global</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
 
 body{
-background:#080811;
-color:white;
-line-height:1.6;
+  background:#080811;
+  color:white;
+  line-height:1.6;
 }
 
 header{
-background:#111122;
-padding:18px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #292945;
+  background:#111122;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #292945;
 }
 
 .logo{
-color:#b77cff;
-font-size:22px;
-font-weight:bold;
+  color:#b77cff;
+  font-size:22px;
+  font-weight:bold;
 }
 
 nav a{
-color:#ddd;
-text-decoration:none;
-margin-left:18px;
-font-size:14px;
+  color:#ddd;
+  text-decoration:none;
+  margin-left:15px;
+  font-size:14px;
 }
 
 .hero{
-min-height:75vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:50px 20px;
-background:linear-gradient(135deg,#080811,#17132a);
-}
-
-.hero-content{
-max-width:800px;
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(135deg,#080811,#17132a);
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:15px;
+  font-size:45px;
+  margin-bottom:15px;
 }
 
 .hero h1 span{
-color:#b77cff;
+  color:#b77cff;
 }
 
 .hero p{
-color:#b8b8c8;
-font-size:17px;
-margin-bottom:28px;
+  color:#bbb;
+  margin-bottom:25px;
 }
 
 .btn{
-display:inline-block;
-padding:13px 22px;
-margin:5px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-border:none;
-cursor:pointer;
+  display:inline-block;
+  padding:12px 20px;
+  margin:5px;
+  border:0;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
 .primary{
-background:#9b5cff;
-color:white;
-}
-
-.secondary{
-background:#25253b;
-color:white;
+  background:#9b5cff;
+  color:white;
 }
 
 section{
-padding:60px 6%;
+  padding:55px 6%;
 }
 
 .title{
-text-align:center;
-margin-bottom:35px;
+  text-align:center;
+  margin-bottom:30px;
 }
 
 .title h2{
-font-size:30px;
+  font-size:30px;
 }
 
 .title p{
-color:#999;
-margin-top:8px;
+  color:#999;
 }
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-max-width:1100px;
-margin:auto;
+.services,
+.numbers{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
 }
 
 .card{
-background:#141425;
-padding:25px;
-border-radius:12px;
-border:1px solid #292945;
+  background:#141425;
+  border:1px solid #292945;
+  border-radius:12px;
+  padding:25px;
 }
 
 .icon{
-font-size:32px;
-margin-bottom:12px;
+  font-size:32px;
 }
 
 .card h3{
-color:#c08cff;
-margin-bottom:8px;
+  color:#c08cff;
+  margin:10px 0;
 }
 
 .card p{
-color:#aaa;
-font-size:14px;
-margin-bottom:15px;
+  color:#aaa;
+  font-size:14px;
+  margin-bottom:15px;
 }
 
 .card button{
-width:100%;
-padding:11px;
-border:0;
-border-radius:7px;
-background:#9b5cff;
-color:white;
-font-weight:bold;
-cursor:pointer;
+  width:100%;
+  padding:11px;
+  border:0;
+  border-radius:7px;
+  background:#9b5cff;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.country-box,
-.login-box{
-max-width:550px;
-margin:auto;
-background:#141425;
-padding:30px;
-border-radius:14px;
-border:1px solid #292945;
+.number-box{
+  max-width:600px;
+  margin:auto;
+  background:#141425;
+  padding:30px;
+  border-radius:14px;
+  border:1px solid #292945;
 }
 
 select,
 input{
-width:100%;
-padding:14px;
-margin-bottom:14px;
-background:#0d0d18;
-border:1px solid #33334d;
-color:white;
-border-radius:8px;
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  background:#0d0d18;
+  color:white;
+  border:1px solid #33334d;
+  border-radius:8px;
 }
 
-.country-box button,
-.login-box button{
-width:100%;
+.number-box button{
+  width:100%;
 }
 
-#result{
-margin-top:18px;
-color:#aaa;
-text-align:center;
+#numbersResult{
+  margin-top:25px;
+}
+
+.number-item{
+  background:#0d0d18;
+  padding:18px;
+  margin-top:12px;
+  border-radius:9px;
+  border:1px solid #292945;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.price{
+  color:#c08cff;
+  font-weight:bold;
+}
+
+.login-box{
+  max-width:450px;
+  margin:auto;
+  background:#141425;
+  padding:30px;
+  border-radius:14px;
 }
 
 footer{
-background:#111122;
-padding:30px 20px;
-text-align:center;
-color:#888;
-border-top:1px solid #292945;
+  text-align:center;
+  background:#111122;
+  padding:30px;
+  color:#888;
 }
 
 footer strong{
-color:#b77cff;
+  color:#b77cff;
 }
 
 @media(max-width:600px){
-header{
-flex-direction:column;
-gap:10px;
-}
+  header{
+    flex-direction:column;
+    gap:10px;
+  }
 
-nav a{
-margin:0 7px;
-}
+  .hero h1{
+    font-size:34px;
+  }
 
-.hero h1{
-font-size:34px;
-}
-
-section{
-padding:45px 20px;
-}
+  .number-item{
+    flex-direction:column;
+    align-items:stretch;
+  }
 }
 </style>
 </head>
@@ -214,191 +220,365 @@ padding:45px 20px;
 <body>
 
 <header>
+  <div class="logo">SOFT LOGS GLOBAL</div>
 
-<div class="logo">SOFT LOGS GLOBAL</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#country">Countries</a>
-<a href="#login">Login</a>
-</nav>
-
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#numbers">Numbers</a>
+    <a href="#login">Login</a>
+  </nav>
 </header>
+
 
 <section class="hero" id="home">
 
-<div class="hero-content">
+  <h1>
+    Welcome to <span>Soft Logs Global</span>
+  </h1>
 
-<h1>
-Welcome to <span>Soft Logs Global</span>
-</h1>
+  <p>
+    Your digital services platform for supported global services.
+  </p>
 
-<p>
-Your digital services platform. Explore supported services
-and manage your orders from one convenient place.
-</p>
+  <a href="#services" class="btn primary">
+    Explore Services
+  </a>
 
-<a href="#services" class="btn primary">
-Explore Services
-</a>
-
-<a href="#login" class="btn secondary">
-Customer Login
-</a>
-
-</div>
+  <a href="#login" class="btn primary">
+    Customer Login
+  </a>
 
 </section>
+
 
 <section id="services">
 
-<div class="title">
+  <div class="title">
+    <h2>Explore Our Services</h2>
+    <p>Choose a service below.</p>
+  </div>
 
-<h2>Explore Our Services</h2>
+  <div class="services">
 
-<p>Select a service to learn more.</p>
+    <div class="card">
+      <div class="icon">📱</div>
 
-</div>
+      <h3>Virtual Numbers</h3>
 
-<div class="services">
+      <p>
+        Browse legitimate virtual-number services from approved providers.
+      </p>
 
-<div class="card">
-<div class="icon">🌍</div>
-<h3>Global Services</h3>
-<p>
-Explore supported digital services available across different countries.
-</p>
-<button onclick="serviceMessage('Global Services')">
-View Service
-</button>
-</div>
+      <a href="#numbers">
+        <button>View Numbers</button>
+      </a>
+    </div>
 
-<div class="card">
-<div class="icon">📱</div>
-<h3>Virtual Numbers</h3>
-<p>
-Browse legitimate virtual-number services when connected to an approved provider.
-</p>
-<button onclick="serviceMessage('Virtual Numbers')">
-View Service
-</button>
-</div>
 
-<div class="card">
-<div class="icon">💳</div>
-<h3>Payments</h3>
-<p>
-Secure payment options can be connected to supported payment providers.
-</p>
-<button onclick="serviceMessage('Payments')">
-View Service
-</button>
-</div>
+    <div class="card">
 
-<div class="card">
-<div class="icon">👤</div>
-<h3>Customer Dashboard</h3>
-<p>
-Manage your account, orders and supported services in one place.
-</p>
-<button onclick="serviceMessage('Customer Dashboard')">
-View Service
-</button>
-</div>
+      <div class="icon">🌍</div>
 
-<div class="card">
-<div class="icon">💰</div>
-<h3>Wallet</h3>
-<p>
-Manage your account balance and future transactions securely.
-</p>
-<button onclick="serviceMessage('Wallet')">
-View Service
-</button>
-</div>
+      <h3>Global Services</h3>
 
-<div class="card">
-<div class="icon">📋</div>
-<h3>Order History</h3>
-<p>
-Keep track of your previous orders and service requests.
-</p>
-<button onclick="serviceMessage('Order History')">
-View Service
-</button>
-</div>
+      <p>
+        Explore supported services across different countries.
+      </p>
 
-</div>
+      <button onclick="showMessage('Global services will be available soon.')">
+        View Service
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">💳</div>
+
+      <h3>Payments</h3>
+
+      <p>
+        Secure payment options can be connected to supported providers.
+      </p>
+
+      <button onclick="showMessage('Payment system will be connected soon.')">
+        View Service
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">👤</div>
+
+      <h3>Customer Dashboard</h3>
+
+      <p>
+        Manage your account, orders and services.
+      </p>
+
+      <button onclick="showMessage('Customer dashboard will be connected soon.')">
+        Open Dashboard
+      </button>
+
+    </div>
+
+  </div>
 
 </section>
 
-<section id="country">
 
-<div class="title">
+<section id="numbers">
 
-<h2>Select a Country</h2>
+  <div class="title">
 
-<p>
-Choose a country to check supported services.
-</p>
+    <h2>📱 Virtual Numbers</h2>
 
-</div>
+    <p>
+      Select a country to view available demo services.
+    </p>
 
-<div class="country-box">
+  </div>
 
-<select id="countrySelect">
 
-<option value="">
-Choose country
-</option>
+  <div class="number-box">
 
-<option>Nigeria 🇳🇬</option>
-<option>United States 🇺🇸</option>
-<option>United Kingdom 🇬🇧</option>
-<option>Canada 🇨🇦</option>
-<option>France 🇫🇷</option>
-<option>Germany 🇩🇪</option>
-<option>Ghana 🇬🇭</option>
-<option>South Africa 🇿🇦</option>
+    <select id="country">
 
-</select>
+      <option value="">
+        Select country
+      </option>
 
-<button class="btn primary" onclick="checkCountry()">
-Check Services
-</button>
+      <option value="Nigeria">
+        🇳🇬 Nigeria
+      </option>
 
-<div id="result"></div>
+      <option value="United States">
+        🇺🇸 United States
+      </option>
 
-</div>
+      <option value="United Kingdom">
+        🇬🇧 United Kingdom
+      </option>
+
+      <option value="Canada">
+        🇨🇦 Canada
+      </option>
+
+      <option value="Ghana">
+        🇬🇭 Ghana
+      </option>
+
+      <option value="South Africa">
+        🇿🇦 South Africa
+      </option>
+
+    </select>
+
+
+    <button
+      class="btn primary"
+      onclick="showNumbers()">
+      Check Availability
+    </button>
+
+
+    <div id="numbersResult"></div>
+
+  </div>
 
 </section>
+
 
 <section id="login">
 
-<div class="title">
+  <div class="title">
 
-<h2>Customer Login</h2>
+    <h2>Customer Login</h2>
 
-<p>
-Access your Soft Logs Global account.
-</p>
+    <p>
+      Access your Soft Logs Global account.
+    </p>
 
-</div>
+  </div>
 
-<div class="login-box">
 
-<input
-type="email"
-id="email"
-placeholder="Email address"
->
+  <div class="login-box">
 
-<input
-type="password"
-id="password"
-placeholder="Password"
->
+    <input
+      type="email"
+      id="email"
+      placeholder="Email address"
+    >
 
-<button class="btn primary" onclick="login()">
-Login
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+    >
+
+    <button
+      class="btn primary"
+      onclick="login()">
+      Login
+    </button>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 <strong>Soft Logs Global</strong>.
+    All rights reserved.
+  </p>
+
+</footer>
+
+
+<script>
+
+function showMessage(message){
+
+  alert(message);
+
+}
+
+
+function showNumbers(){
+
+  const country =
+    document.getElementById("country").value;
+
+  const result =
+    document.getElementById("numbersResult");
+
+
+  if(!country){
+
+    result.innerHTML =
+      "<p>Please select a country first.</p>";
+
+    return;
+  }
+
+
+  result.innerHTML = `
+
+    <div class="number-item">
+
+      <div>
+
+        <strong>
+          ${country} Virtual Number
+        </strong>
+
+        <br>
+
+        <span class="price">
+          Demo price: $2.00
+        </span>
+
+      </div>
+
+      <button
+        class="btn primary"
+        onclick="orderNumber('${country}')">
+
+        Order
+
+      </button>
+
+    </div>
+
+
+    <div class="number-item">
+
+      <div>
+
+        <strong>
+          ${country} SMS Number
+        </strong>
+
+        <br>
+
+        <span class="price">
+          Demo price: $3.00
+        </span>
+
+      </div>
+
+      <button
+        class="btn primary"
+        onclick="orderNumber('${country}')">
+
+        Order
+
+      </button>
+
+    </div>
+
+
+    <p style="
+      color:#888;
+      margin-top:15px;
+      font-size:13px;
+    ">
+
+      Demo listings only.
+      Live inventory requires a legitimate
+      provider connection.
+
+    </p>
+
+  `;
+
+}
+
+
+function orderNumber(country){
+
+  alert(
+    "Order request for a " +
+    country +
+    " number received. " +
+    "Live ordering will be connected to an approved provider."
+  );
+
+}
+
+
+function login(){
+
+  const email =
+    document.getElementById("email").value;
+
+  const password =
+    document.getElementById("password").value;
+
+
+  if(!email || !password){
+
+    alert(
+      "Please enter your email and password."
+    );
+
+    return;
+  }
+
+
+  alert(
+    "Login backend will be connected soon."
+  );
+
+}
+
+</script>
+
+</body>
+</html>
