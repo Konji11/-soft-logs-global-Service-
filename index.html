@@ -1,14 +1,425 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soft Logs Global</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #080811;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111122;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #292945;
+    }
+
+    .logo {
+      color: #b77cff;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #b77cff;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #080811, #17132a);
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #b77cff;
+    }
+
+    .hero p {
+      color: #b8b8c8;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      margin: 5px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: #9b5cff;
+      color: white;
+    }
+
+    .secondary {
+      background: #25253b;
+      color: white;
+    }
+
+    section {
+      padding: 60px 6%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .title h2 {
+      font-size: 30px;
+    }
+
+    .title p {
+      color: #999;
+      margin-top: 8px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #141425;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #292945;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #9b5cff;
+    }
+
+    .card .icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #c08cff;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .country-box {
+      max-width: 550px;
+      margin: auto;
+      background: #141425;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #292945;
+    }
+
+    select,
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 14px;
+      background: #0d0d18;
+      border: 1px solid #33334d;
+      color: white;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .country-box button {
+      width: 100%;
+    }
+
+    #result {
+      margin-top: 18px;
+      color: #aaa;
+      text-align: center;
+    }
+
+    .login-box {
+      max-width: 450px;
+      margin: auto;
+      background: #141425;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #292945;
+    }
+
+    footer {
+      background: #111122;
+      padding: 30px 20px;
+      text-align: center;
+      color: #888;
+      border-top: 1px solid #292945;
+    }
+
+    footer strong {
+      color: #b77cff;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      section {
+        padding: 45px 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>SOFT LOGS GLOBAL</h1>
-  <p>Digital Services Platform</p>
+  <header>
+    <div class="logo">SOFT LOGS GLOBAL</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#login">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>
+        Welcome to
+        <span>Soft Logs Global</span>
+      </h1>
+
+      <p>
+        Your digital services platform for accessing supported
+        global services from one convenient place.
+      </p>
+
+      <a href="#services" class="btn primary">
+        Explore Services
+      </a>
+
+      <a href="#login" class="btn secondary">
+        Customer Login
+      </a>
+
+    </div>
+  </section>
+
+  <section id="services">
+
+    <div class="title">
+      <h2>Our Services</h2>
+      <p>Explore the services available on Soft Logs Global.</p>
+    </div>
+
+    <div class="services">
+
+      <div class="card">
+        <div class="icon">🌍</div>
+        <h3>Global Services</h3>
+        <p>
+          Access supported digital services across different countries.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Virtual Numbers</h3>
+        <p>
+          Browse legitimate virtual-number services when connected
+          to an approved provider.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💳</div>
+        <h3>Payments</h3>
+        <p>
+          Secure payment functionality can be connected to a
+          supported payment provider.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👤</div>
+        <h3>Customer Dashboard</h3>
+        <p>
+          Manage your account, orders and supported services
+          from one dashboard.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+
+    <div class="title">
+      <h2>Select a Country</h2>
+      <p>Choose a country to check supported services.</p>
+    </div>
+
+    <div class="country-box">
+
+      <select id="country">
+        <option value="">Choose country</option>
+        <option value="Nigeria">🇳🇬 Nigeria</option>
+        <option value="United States">🇺🇸 United States</option>
+        <option value="United Kingdom">🇬🇧 United Kingdom</option>
+        <option value="Canada">🇨🇦 Canada</option>
+        <option value="France">🇫🇷 France</option>
+        <option value="Germany">🇩🇪 Germany</option>
+        <option value="Ghana">🇬🇭 Ghana</option>
+        <option value="South Africa">🇿🇦 South Africa</option>
+      </select>
+
+      <button class="btn primary" onclick="checkCountry()">
+        Check Services
+      </button>
+
+      <div id="result"></div>
+
+    </div>
+  </section>
+
+  <section id="login">
+
+    <div class="title">
+      <h2>Customer Login</h2>
+      <p>Access your Soft Logs Global account.</p>
+    </div>
+
+    <div class="login-box">
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Email address"
+      >
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+      >
+
+      <button class="btn primary" style="width:100%;" onclick="login()">
+        Login
+      </button>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>
+      © 2026 <strong>Soft Logs Global</strong>.
+      All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+
+    function checkCountry() {
+
+      const country =
+        document.getElementById("country").value;
+
+      const result =
+        document.getElementById("result");
+
+      if (country === "") {
+
+        result.textContent =
+          "Please select a country first.";
+
+        return;
+      }
+
+      result.textContent =
+        "Checking available services for " +
+        country +
+        "...";
+
+    }
+
+
+    function login() {
+
+      const email =
+        document.getElementById("email").value;
+
+      const password =
+        document.getElementById("password").value;
+
+      if (email === "" || password === "") {
+
+        alert("Please enter your email and password.");
+
+        return;
+      }
+
+      alert(
+        "The login system will be connected to the backend soon."
+      );
+
+    }
+
+  </script>
 
 </body>
 </html>
