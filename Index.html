@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soft Logs Global</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+
+body{
+background:#080811;
+color:white;
+line-height:1.6;
+}
+
+header{
+background:#111122;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #292945;
+}
+
+.logo{
+color:#b77cff;
+font-size:22px;
+font-weight:bold;
+}
+
+nav a{
+color:#ddd;
+text-decoration:none;
+margin-left:18px;
+font-size:14px;
+}
+
+.hero{
+min-height:75vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:50px 20px;
+background:linear-gradient(135deg,#080811,#17132a);
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero h1 span{
+color:#b77cff;
+}
+
+.hero p{
+color:#b8b8c8;
+font-size:17px;
+margin-bottom:28px;
+}
+
+.btn{
+display:inline-block;
+padding:13px 22px;
+margin:5px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+border:none;
+cursor:pointer;
+}
+
+.primary{
+background:#9b5cff;
+color:white;
+}
+
+.secondary{
+background:#25253b;
+color:white;
+}
+
+section{
+padding:60px 6%;
+}
+
+.title{
+text-align:center;
+margin-bottom:35px;
+}
+
+.title h2{
+font-size:30px;
+}
+
+.title p{
+color:#999;
+margin-top:8px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:#141425;
+padding:25px;
+border-radius:12px;
+border:1px solid #292945;
+}
+
+.icon{
+font-size:32px;
+margin-bottom:12px;
+}
+
+.card h3{
+color:#c08cff;
+margin-bottom:8px;
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.card button{
+width:100%;
+padding:11px;
+border:0;
+border-radius:7px;
+background:#9b5cff;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.country-box,
+.login-box{
+max-width:550px;
+margin:auto;
+background:#141425;
+padding:30px;
+border-radius:14px;
+border:1px solid #292945;
+}
+
+select,
+input{
+width:100%;
+padding:14px;
+margin-bottom:14px;
+background:#0d0d18;
+border:1px solid #33334d;
+color:white;
+border-radius:8px;
+}
+
+.country-box button,
+.login-box button{
+width:100%;
+}
+
+#result{
+margin-top:18px;
+color:#aaa;
+text-align:center;
+}
+
+footer{
+background:#111122;
+padding:30px 20px;
+text-align:center;
+color:#888;
+border-top:1px solid #292945;
+}
+
+footer strong{
+color:#b77cff;
+}
+
+@media(max-width:600px){
+header{
+flex-direction:column;
+gap:10px;
+}
+
+nav a{
+margin:0 7px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+section{
+padding:45px 20px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">SOFT LOGS GLOBAL</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#country">Countries</a>
+<a href="#login">Login</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Welcome to <span>Soft Logs Global</span>
+</h1>
+
+<p>
+Your digital services platform. Explore supported services
+and manage your orders from one convenient place.
+</p>
+
+<a href="#services" class="btn primary">
+Explore Services
+</a>
+
+<a href="#login" class="btn secondary">
+Customer Login
+</a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="title">
+
+<h2>Explore Our Services</h2>
+
+<p>Select a service to learn more.</p>
+
+</div>
+
+<div class="services">
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Global Services</h3>
+<p>
+Explore supported digital services available across different countries.
+</p>
+<button onclick="serviceMessage('Global Services')">
+View Service
+</button>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Virtual Numbers</h3>
+<p>
+Browse legitimate virtual-number services when connected to an approved provider.
+</p>
+<button onclick="serviceMessage('Virtual Numbers')">
+View Service
+</button>
+</div>
+
+<div class="card">
+<div class="icon">💳</div>
+<h3>Payments</h3>
+<p>
+Secure payment options can be connected to supported payment providers.
+</p>
+<button onclick="serviceMessage('Payments')">
+View Service
+</button>
+</div>
+
+<div class="card">
+<div class="icon">👤</div>
+<h3>Customer Dashboard</h3>
+<p>
+Manage your account, orders and supported services in one place.
+</p>
+<button onclick="serviceMessage('Customer Dashboard')">
+View Service
+</button>
+</div>
+
+<div class="card">
+<div class="icon">💰</div>
+<h3>Wallet</h3>
+<p>
+Manage your account balance and future transactions securely.
+</p>
+<button onclick="serviceMessage('Wallet')">
+View Service
+</button>
+</div>
+
+<div class="card">
+<div class="icon">📋</div>
+<h3>Order History</h3>
+<p>
+Keep track of your previous orders and service requests.
+</p>
+<button onclick="serviceMessage('Order History')">
+View Service
+</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="country">
+
+<div class="title">
+
+<h2>Select a Country</h2>
+
+<p>
+Choose a country to check supported services.
+</p>
+
+</div>
+
+<div class="country-box">
+
+<select id="countrySelect">
+
+<option value="">
+Choose country
+</option>
+
+<option>Nigeria 🇳🇬</option>
+<option>United States 🇺🇸</option>
+<option>United Kingdom 🇬🇧</option>
+<option>Canada 🇨🇦</option>
+<option>France 🇫🇷</option>
+<option>Germany 🇩🇪</option>
+<option>Ghana 🇬🇭</option>
+<option>South Africa 🇿🇦</option>
+
+</select>
+
+<button class="btn primary" onclick="checkCountry()">
+Check Services
+</button>
+
+<div id="result"></div>
+
+</div>
+
+</section>
+
+<section id="login">
+
+<div class="title">
+
+<h2>Customer Login</h2>
+
+<p>
+Access your Soft Logs Global account.
+</p>
+
+</div>
+
+<div class="login-box">
+
+<input
+type="email"
+id="email"
+placeholder="Email address"
+>
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+>
+
+<button class="btn primary" onclick="login()">
+Login
