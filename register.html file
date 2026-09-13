@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Registration - Soft Logs Global</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b16;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 420px;
+      background: #15152a;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 8px;
+      background: #24243d;
+      color: white;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #7c3aed;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #6d28d9;
+    }
+
+    .login {
+      text-align: center;
+      margin-top: 20px;
+      color: #aaa;
+    }
+
+    a {
+      color: #a78bfa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Create Account</h1>
+
+    <p class="subtitle">Join Soft Logs Global</p>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+
+      <input type="email" placeholder="Email Address" required>
+
+      <input type="tel" placeholder="Phone Number" required>
+
+      <input type="password" placeholder="Password" required>
+
+      <input type="password" placeholder="Confirm Password" required>
+
+      <button type="submit">Create Account</button>
+    </form>
+
+    <div class="login">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+
+</body>
+</html>
